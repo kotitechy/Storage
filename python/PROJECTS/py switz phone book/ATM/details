@@ -1,0 +1,23 @@
+fields exists in database ac-holders(register) table
+fullname = first+last+surnames
+dob
+gender
+address
+qualification
+mobile_number
+adhar_number
+email
+account_type
+amount
+pancard
+atm--generated
+atm-pin
+profilephoto
+id proof
+
+* user-dashboard
+update details
+generate debeit card
+generate debit card pin
+change debit card pin
+
