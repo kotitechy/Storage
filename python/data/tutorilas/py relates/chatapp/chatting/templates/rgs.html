@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registring Page</title>
+    <style>
+     body {
+            font-family: Arial, sans-serif;
+           background-image: url('download.jpg'); 
+           background-repeat: no-repeat;
+           background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+
+        }
+
+        .vid{
+            
+            mix-blend-mode: screen;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+           opacity: 10;
+        }
+
+        .registring-container {
+            background : transparent;
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 650px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .registring-container h1{
+            color: #000000;
+        }
+
+        .registring-container h2 {
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .registring-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .registring-container button {
+            background-color: #72005f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            
+        }
+
+        .registring-container button:hover {
+            background-color: #ff2fdc;
+        }
+
+        #opt {
+          background-color: #000980;
+          width: 250px;
+          color: #fff;
+            padding: 10px 20px;
+            margin: 2px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <video autoplay muted loop  class="vid">
+        <source src="vecteezy_petals-falling-stock-video-footage_4286668.mp4" type="video/mp4">
+    </video>
+    <div class="registring-container">
+        <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">new here!</h1>
+       <h2>REGISTER</h2>
+       <form action="#" method="post">
+        <input type="text" name="name" placeholder="name" required>
+        <input type="tel" name="phone number" placeholder="Phone number" maxlength="10" required>
+        <input type="email" name="email" placeholder="enetr your email" requrired>
+        <input type="date" name="DateOfBirth" placeholder="date of birth" required>
+        <input type="password" name="password" placeholder=" create Password" maxlength="8" required>
+        <input type="password" name="password" placeholder=" re-enter Password" maxlength="8" required>
+       
+        <button type="submit">sign in</button> <br>
+        <a href="loginpage.html"> already have an account?</a>
+        <h2 style="font-family: 'Courier New', Courier, monospace;">----- or ----- </h2>
+        
+        <button type="button" id="opt"> google</button>
+        <button type="button" id="opt"> facebook</button>
+    </form>
+
+    </div>
+</body>
+</html>
