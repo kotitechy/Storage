@@ -1,0 +1,5 @@
+databse = 'database-2'
+user = 'admin'
+password = 'admin123'
+port = '3306'
+host = 'database-2.cnu8u8is2p4e.us-east-1.rds.amazonaws.com'

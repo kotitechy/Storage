@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <style>
+        /* Basic styling for the chatbox */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .chat-container {
+            max-width: 80%;
+            max-height: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .chat-messages {
+            padding: 10px;
+            overflow-y: scroll;
+            max-height: 300px;
+        }
+        .user-message {
+            background-color: #f0f0f0;
+            padding: 5px;
+            width: 50%;
+            float: right;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .bot-message {
+            background-color: #d4edda;
+            padding: 5px;
+            width: 50%;
+            float: left;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .user-input {
+            flex-grow: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .send-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            Chatbox
+        </div>
+        <div class="chat-messages">
+            <!-- Existing chat messages here -->
+        </div>
+ <!-- <form action="#" method="post"> -->
+     {% csrf_token %}
+        <div class="input-container">
+    <input type="text" name="msg"  placeholder="Type your message...">
+    <button type="submit" class="send-button">Send</button>
+        </div>
+ <!-- </form> -->
+    </div>
+</body>
+<script>
+    const usrmsg = document.querySelector('.msg')
+    const btn = document.querySelector('.send-button')
+
+    btn.addEventListener('click', () => {
+        const msg = usrmsg.value.trim()
+        console.log(msg)
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.classList.add('user-message');
+        userMessageDiv.textContent = msg;
+        chatMessages.appendChild(userMessageDiv);
+    })
+
+</script>
+</html>
+<!--this is a html,css,js code for a simple chat box check it onces-->

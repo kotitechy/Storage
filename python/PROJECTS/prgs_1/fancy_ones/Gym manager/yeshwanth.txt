@@ -1,0 +1,2 @@
+
+time: 2024-05-08 21:49:02.263677, excercises: 2, ['pushups', 'dips']
