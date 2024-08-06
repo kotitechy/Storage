@@ -1,0 +1,22 @@
+Timestamp: 2024-01-14 13:03:34
+Name: shivacharan
+Email: ksc11197@gmail.com
+Phone: 9392953796
+Gender: Male
+Age: 18
+Address: osmannanar,hno-1-38
+Study: diploma,3rdyear,cse
+Relation: s/o srisailam
+Date of Birth: 2005-04-27
+
+Timestamp: 2024-01-14 13:03:46
+Name: shivacharan
+Email: ksc11197@gmail.com
+Phone: 9392953796
+Gender: Male
+Age: 18
+Address: osmannanar,hno-1-38
+Study: diploma,3rdyear,cse
+Relation: s/o srisailam
+Date of Birth: 2005-04-27
+

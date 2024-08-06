@@ -1,0 +1,22 @@
+Timestamp: 2023-11-18 22:06:49
+Name: shiva
+Email: ksc11197@gmail
+Phone: 9392953796
+Gender: Male
+Age: 18
+Address: osm
+Study: ssc
+Relation: s/o sreisailam
+Date of Birth: 2005-04-27
+
+Timestamp: 2023-11-18 22:07:01
+Name: shiva
+Email: ksc11197@gmail
+Phone: 9392953796
+Gender: Male
+Age: 18
+Address: osm
+Study: ssc
+Relation: s/o sreisailam
+Date of Birth: 2005-04-27
+

@@ -1,0 +1,19 @@
+introduce
+wikipedia
+ok google
+open google
+open facebook
+open instagram
+open twitter
+open watsapp
+open stackoverflow
+open automate
+date
+time
+day
+week
+stop
+good night
+wish
+search meaning
+else--> error

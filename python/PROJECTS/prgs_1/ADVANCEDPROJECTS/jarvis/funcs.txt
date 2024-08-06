@@ -1,0 +1,42 @@
+1. speak
+-
+
+
+
+
+
+
+
+
+
+
+
+
+--> modules
+1. pyttsx3
+2. sapi5-api
+3. datetime
+4. speech recognition
+5. wikipedia
+6. pydictionary
+7. pip install googletrans==4.0.0rc1
+
+def prompt():
+    # prompt to perform task -i/p from microphone and text as o/p
+
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print('Listening...')
+        r.pause_threshold = 1 # seconds of non-speking time before taking the phase to be completed
+
+        audio = r.listen(source)
+        # 
+        try:
+            print('Reconizing...')
+            q = r.recognize_google(audio, language='en-in')
+            print(f'user said: {q} \n ') 
+        except Exception as e:
+            # print(e)
+            print('Say That again! please')
+            return 'None'
+    return q
