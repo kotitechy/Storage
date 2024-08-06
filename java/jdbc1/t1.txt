@@ -1,0 +1,35 @@
+1. load driver 
+  class.forName("com.mysql.jdbc.Driver");
+
+2. surround  in try catch
+
+or 
+use driver manager method 
+
+DriverManager.regesterDriver(new com.mysql.jdbc.Driver());
+
+2. create a connection 
+DriverManager con=DriverManager.getConnection("url","username","password");
+
+EX: DriverManager con=DriverManager.getConnection("jdbc:mysql://localhost:3306/db1","root","root");
+ 
+
+//connection interface is present in com.sql package
+
+
+3. create q query , Statements , preparedStatements , callable statements;
+eg: String str = "select * students";
+
+4. create  a statement object 
+Statement stmt = con.createStatement();
+
+--> stmt.executeQuery(q);
+  // used for normal update
+
+  resultSet set = stmt.executeQuery(q);
+
+  5. process the data :
+
+  while(set.next()){
+    int id = set.getInt("StudentId");
+  }
