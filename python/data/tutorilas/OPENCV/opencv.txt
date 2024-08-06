@@ -1,0 +1,35 @@
+open cv
+sopen source computer vision
+images are seen by computer in the form of matrix 
+pixel for inch
+computer sees images in pixel matrix
+
+images 2types
+1. gray scale--> each pixel represents the amount of intensity of one shade(1channel)
+2. color-->3channels-->rgb
+
+matrices are stores using numppy arrays in 2d arrays
+
+-->install opencv 
+>>pip install opencv-python
+
+--> use opencv
+import cv2
+
+--> check version
+print(cv2.__version__)
+
+--> read images 
+cv2.imread(imagename, flag)
+flag--> 3
+1  >>  color mode
+0  >>  gray scale mode
+-1  >>  loads image including alpha channel
+
+>> readimage
+cv2.imread('image,flag)
+>> display image
+cv2.imshow('window_name', image)
+
+
+# opencv --> prperties of cv2.cap ('opencv\Flags for video i/o')
