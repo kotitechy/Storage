@@ -1,0 +1,804 @@
+
+//program-1
+#include<iostream>
+using namespace std;
+int main(){
+	int a;
+	string name;
+	cout<<"Enter your name ";
+	getline(cin,name);
+	cout<<"\n ENter  your rollno ";
+	cin>>a;
+	cout<<"The student details are"<<endl<<"name: "<<name;
+	cout<<endl <<"rollno: "<<a;
+	return 0;
+}
+//program-2(a)
+
+//if statement
+#include<iostream>
+using namespace std;
+int main(){
+	int age;
+	cout<<"Entyer your age: ";
+	cin>>age;
+	if(age<=18){
+		cout<<"\n you are not allowed to vote ";
+	}
+	else{
+	cout<<"\n You are eligible to vote ";
+	}
+	
+	return 0;
+}
+
+//program-2(b)
+
+//if else statement
+
+#include<iostream>
+using namespace std;
+int main(){
+int n;
+cout<<"Enter a number ";
+cin>>n;
+
+if(n>=0){
+	cout<<"\n The number is positive";
+}	
+else{
+	cout<<"\n The number is negative ";
+}
+	
+}
+//program-2(c)
+
+
+//else if...else if statement
+#include<iostream>
+using namespace std;
+int main(){
+int a,b,c;
+cout<<"Enter 3 numbers  ";
+cin>>a>>b>>c;
+
+if(a>=b){
+	if(a>=c){
+	
+	cout<<"\n A is big";
+}
+else{
+	cout<<endl<<"c is big";
+}
+}
+else if(b>=a){
+	if(b>=c){
+	
+	cout<<"\n B is big";
+}
+else{
+	cout<<endl<<"c is big";
+}
+}
+}
+
+//program-3(program on arrays)
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],i,n;
+	cout<<endl<<"Enter a number: ";
+	cin>>n;
+	
+	for(i=0;i<n;i++){
+		cout<<endl<<"Enter a["<<i<<"]";
+		cin>>a[i];
+	}
+	for(i=0;i<n;i++){
+		cout<<a[i]<<"\t";
+	}
+	return 0;
+}
+//program-4(while loop)
+
+//loops
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n,m,i,s=0;
+	cout<<"Enter the number: ";
+	cin>>n;
+	m=n;
+    while(n>0){
+    	i=n/10;
+    	s=s*10+i;
+    	n=n/10;
+	}	
+	if(m==s){
+		cout<<endl<<"The number is palantrom";
+		
+	}
+	else {
+		cout<<endl<<"The number is not a palantrom";
+	}
+	return 0;
+}
+//program-4(dowhileloop)
+#include<iostream>
+using namespace std;
+
+int main(){
+	int i=1,n;
+	cout<<"Enter a number: ";
+	cin>>n;
+	
+	do{
+		if(n%i==0){
+			cout<<endl<<i;
+			
+		}
+		i++;
+	}while(i<=n);
+	return 0;
+}
+//program-4(for loop)
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n,r;
+	cout<<endl<<"Enter a number: ";
+	cin>>n;
+	cout<<endl<<"Multiplication table of "<<n<<endl;
+	for(int i=1;i<11;i++){
+		r=i*n;
+		cout<<"\t \t \t "<<n<<" * "<<i<<" = "<<r<<endl;
+	}
+	
+	return 0;
+}
+//program-5
+//objects and classes
+#include<iostream>
+using namespace std;
+
+class student{
+	private:
+		int rollno;
+		string name;
+		float marks;
+		
+		public:
+			void getdata();
+			void putdata();
+			
+};
+void student::getdata(){
+	cout<<endl<<"Enter the student details: ";
+	cout<<endl<<"Rollno: ";
+	cin>>rollno;
+	cout<<endl<<"Name: ";
+	cin>>ws>>name;
+//	getline(cin,name);
+	cout<<endl<<"Marks: ";
+	cin>>marks;
+}
+
+void student::putdata(){
+	cout<<endl<<"The student details are: ";
+	cout<<endl<<"Name  : "<<name;
+	cout<<endl<<"Rollno: "<<rollno;
+	cout<<endl<<"Marks : "<<marks;
+}
+
+int main(){
+	
+student ob;
+
+ob.getdata();
+ob.putdata();
+
+
+return 0;
+}
+6. Write programs using constructor and destructor?
+ a) Class Constructor
+#include <iostream>
+using namespace std;
+class Line {
+ public:
+ void setLength( double len );
+ double getLength( void );
+ Line(); // This is the constructor
+ private:
+ double length;
+};
+// Member functons deenitons including constructor
+Line::Line(void) {
+ cout << "Object is being created" << endl;
+}
+void Line::setLength( double len ) {
+ length = len;
+}
+double Line::getLength( void ) {
+ return length;
+}
+// Main functon for the program
+int main() {
+ Line line;
+ // set line length
+ line.setLength(6.0);
+ cout << "Length of line : " << line.getLength() <<endl;
+ return 0;
+}
+Output:
+Object is being created
+Length of line : 6
+6b): parameterized constructor
+#include <iostream>
+using namespace std;
+class Line {
+ public:
+ void setLength( double len );
+ double getLength( void );
+ Line(double len); // This is the constructor
+ private:
+ double length;
+};
+// Member functons deenitons including constructor
+Line::Line( double len) {
+ cout << "Object is being created, length = " << len << endl;
+ length = len;
+}
+void Line::setLength( double len ) {
+ length = len;
+}
+double Line::getLength( void ) {
+ return length;
+}
+// Main functon for the program
+int main() {
+ Line line(10.0);
+ // get initalll set length.
+ cout << "Length of line : " << line.getLength() <<endl;
+
+ // set line length again
+ line.setLength(6.0);
+ cout << "Length of line : " << line.getLength() <<endl;
+ return 0;
+}
+Output:
+Object is being created, length = 10
+Length of line : 10
+Length of line : 6
+6c): destructor
+ #include <iostream>
+using namespace std;
+class Line {
+ public:
+ void setLength( double len );
+ double getLength( void );
+ Line(); // This is the constructor declaraton
+ ~Line(); // This is the destructor: declaraton
+ private:
+ double length;
+};
+// Member functons deenitons including constructor
+Line::Line(void) {
+ cout << "Object is being created" << endl;
+}
+Line::~Line(void) {
+ cout << "Object is being deleted" << endl;
+}
+void Line::setLength( double len ) {
+ length = len;
+}
+double Line::getLength( void ) {
+ return length;
+}
+// Main functon for the program
+int main() {
+ Line line;
+ // set line length
+ line.setLength(6.0);
+ cout << "Length of line : " << line.getLength() <<endl;
+ return 0;
+}
+Output
+Object is being created
+Length of line : 6
+Object is being deleted
+6d): copy constructor
+#include <iostream>
+using namespace std;
+class Line {
+ public:
+ int getLength( void );
+ Line( int len ); // simple constructor
+ Line( const Line &obj); // copl constructor
+ ~Line(); // destructor
+ private:
+ int *ptr;
+};
+// Member functons deenitons including constructor
+Line::Line(int len) {
+ cout << "Normal constructor allocatng ptr" << endl;
+
+ // allocate memorl for the pointer;
+ ptr = new int;
+ *ptr = len;
+}
+Line::Line(const Line &obj) {
+ cout << "Copl constructor allocatng ptr." << endl;
+ ptr = new int;
+ *ptr = *obj.ptr; // copl the value
+}
+Line::~Line(void) {
+ cout << "Freeing memorl!" << endl;
+ delete ptr;
+}
+int Line::getLength( void ) {
+ return *ptr;
+}
+void displal(Line obj) {
+ cout << "Length of line : " << obj.getLength() <<endl;
+}
+// Main functon for the program
+int main() {
+ Line line(10);
+ displal(line);
+ return 0;
+}
+When the above code is compiled and executed, it produces the following result ?
+Normal constructor allocatng ptr
+Copl constructor allocatng ptr.
+Length of line : 10
+Freeing memorl!
+Freeing memorl!
+7)C++ program to demonstrate the working of friend functon
+#include <iostream>
+using namespace std;
+class Distance {
+ private:
+ int meter;
+
+ // friend functon
+ friend int addFive(Distance);
+ public:
+ Distance() : meter(0) {}
+
+};
+// friend functon deeniton
+int addFive(Distance d) {
+ //accessing private members from the friend functon
+ d.meter += 5;
+ return d.meter;
+}
+int main() {
+ Distance D;
+ cout << "Distance: " << addFive(D);
+ return 0;
+}
+Output
+Distance: 5
+8a):Write programs using inline functon
+#include <iostream>
+using namespace std;
+inline int Max(int x, int l) {
+ return (x > l)? x : l;
+}
+// Main functon for the program
+int main() {
+ cout << "Max (20,10): " << Max(20,10) << endl;
+ cout << "Max (0,200): " << Max(0,200) << endl;
+ cout << "Max (100,1010): " << Max(100,1010) << endl;
+
+ return 0;
+}
+When the above code is compiled and executed, it produces the following result ?
+Max (20,10): 20
+Max (0,200): 200
+Max (100,1010): 1010
+9a): Write a program to pass an object as a functons argument – pass
+object by value, pass object by reference.
+C++ program to show passing
+// of objects to a functon
+#include <bits/stdc++.h>
+using namespace std;
+class Example {
+public:
+int a;
+// This functon will take
+// an object as an argument
+void add(Example E)
+{
+a = a + E.a;
+}
+};
+// Driver Code
+int main()
+{
+// Create objects
+Example E1, E2;
+// Values are initaliied for both objects
+E1.a = 50;
+E2.a = 100;
+cout << "Inital Values \n";
+cout << "Value of object 1: " << E1.a
+<< "\n& object 2: " << E2.a
+<< "\n\n";
+// Passing object as an argument
+// to functon add()
+E2.add(E1);
+// Changed values afer passing
+// object as argument
+cout << "New values \n";
+cout << "Value of object 1: " << E1.a
+<< "\n& object 2: " << E2.a
+<< "\n\n";
+return 0;
+}
+Output
+Inital Values
+Value of object 1: 50
+& object 2: 100
+New values
+Value of object 1: 50
+& object 2: 150
+10a):unary operator
+C++ program to show unary operator
+overloading
+#include <iostream>
+using namespace std;
+class Distance {
+public:
+// Member Object
+int feet, inch;
+// Constructor to initaliie the object's value
+Distance(int f, int i)
+{
+this->feet = f;
+this->inch = i;
+}
+// Overloading(-) operator to perform decrement
+// operaton of Distance object
+void operator-()
+{
+feet--;
+inch--;
+cout << "\nFeet & Inches(Decrement): " << feet << "'" <<
+inch;
+}
+};
+// Driver Code
+int main()
+{
+// Declare and Initaliie the constructor
+Distance d1(8, 9);
+// Use (-) unarl operator bl single operand
+-d1;
+return 0;
+}
+Output:
+Feet & Inches(Decrement): 7'8
+10 b):
+C++ program to show binary operator
+overloading
+#include <iostream>
+using namespace std;
+class Distance {
+public:
+// Member Object
+int feet, inch;
+// No Parameter Constructor
+Distance()
+{
+this->feet = 0;
+this->inch = 0;
+}
+// Constructor to initaliie the object's value
+// Parameteriied Constructor
+Distance(int f, int i)
+{
+this->feet = f;
+this->inch = i;
+}
+// Overloading (+) operator to perform additon of
+// two distance object
+Distance operator+(Distance& d2) // Call bl reference
+{
+// Create an object to return
+Distance d3;
+// Perform additon of feet and inches
+d3.feet = this->feet + d2.feet;
+d3.inch = this->inch + d2.inch;
+// Return the resultng object
+return d3;
+}
+};
+// Driver Code
+int main()
+{
+// Declaring and Initaliiing erst object
+Distance d1(8, 9);
+// Declaring and Initaliiing second object
+Distance d2(10, 2);
+// Declaring third object
+Distance d3;
+// Use overloaded operator
+d3 = d1 + d2;
+// Displal the result
+cout << "\nTotal Feet & Inches: " << d3.feet << "'" << d3.inch;
+return 0;
+}
+Output:
+Total Feet & Inches: 18'11
+11): Write a program to demonstrate the use of functon overloading
+#include <iostream>
+using namespace std;
+void print(int i) {
+cout << " Here is int " << i << endl;
+}
+void print(double f) {
+cout << " Here is foat " << f << endl;
+}
+void print(char const *c) {
+cout << " Here is char* " << c << endl;
+}
+int main() {
+print(10);
+print(10.10);
+print("ten");
+return 0;
+}
+Output:
+Here is int 10
+Here is foat 10.1
+Here is char* ten
+12): Write a simple program on array of objects and pointers
+to objects
+#include <iostream>
+class MlClass {
+ int x;
+public:
+ void setX(int i) { x = i; }
+ int getX() { return x; }
+};
+void main()
+{
+ MlClass obs[4];
+ int i;
+ for(i=0; i < 4; i++)
+ obs[i].setX(i);
+ for(i=0; i < 4; i++)
+ cout << "obs[" << i << "].getX(): " << obs[i].getX() << "\n";
+ getch();
+}
+Output:
+obs[0].getX(): 0
+obs[1].getX(): 1
+obs[2].getX(): 2
+obs[3].getX(): 3
+13): Write programs using new, delete with classes.
+C++ program to illustrate dynamic allocaton
+// and deallocaton of memory using new and delete
+#include <iostream>
+using namespace std;
+int main ()
+{
+// Pointer initaliiaton to null
+int* p = NULL;
+// Request memorl for the variable
+// using new operator
+p = new(nothrow) int;
+if (!p)
+cout << "allocaton of memorl failed\n";
+else
+{
+// Store value at allocated address
+*p = 29;
+cout << "Value of p: " << *p << endl;
+}
+// Request block of memorl
+// using new operator
+foat *r = new foat(75.25);
+cout << "Value of r: " << *r << endl;
+// Request block of memorl of siie n
+int n = 5;
+int *q = new(nothrow) int[n];
+if (!q)
+cout << "allocaton of memorl failed\n";
+else
+{
+for (int i = 0; i < n; i++)
+q[i] = i+1;
+cout << "Value store in block of memorl: ";
+for (int i = 0; i < n; i++)
+cout << q[i] << " ";
+}
+// freed the allocated memorl
+delete p;
+delete r;
+// freed the block of allocated memorl
+delete[] q;
+return 0;
+}
+Output:
+Value of p: 29
+Value of r: 75.25
+Value store in block of memorl: 1 2 3 4 5
+14): Write simple programs illustratng use of all types of inheritances.
+// C++ program to demonstrate implementaton
+// of Inheritance
+#include <bits/stdc++.h>
+using namespace std;
+//Base class
+class Parent
+{
+public:
+int id_p;
+};
+// Sub class inheritng from Base Class(Parent)
+class Child : public Parent
+{
+public:
+int id_c;
+};
+//main functon
+int main()
+{
+Child obj1;
+// An object of class child has all data members
+// and member functons of class parent
+obj1.id_c = 7;
+obj1.id_p = 91;
+cout << "Child id is " << obj1.id_c << endl;
+cout << "Parent id is " << obj1.id_p << endl;
+return 0;
+}
+Output
+Child id is 7
+Parent id is 91
+15)Write a program to illustrate virtual base class
+#include <iostream>
+using namespace std;
+class A {
+public:
+int a;
+A() // constructor
+{
+a = 10;
+}
+};
+class B : public virtual A {
+};
+class C : public virtual A {
+};
+class D : public B, public C {
+};
+int main()
+{
+D object; // object creaton of class d
+cout << "a = " << object.a << endl;
+return 0;
+}
+Output:
+a = 10
+Explanaton :The class A has just one data member a which is public. This class is virtualll inherited in
+class B and class C. Now class B and class C becomes virtual base class and no duplicaton of data
+member a is done.
+16); Write a Program to illustrate virtual functons
+CPP program to illustrate
+// concept of Virtual Functons
+#include <iostream>
+using namespace std;
+class base {
+public:
+virtual void print()
+{
+cout << "print base class" << endl;
+}
+void show()
+{
+cout << "show base class" << endl;
+}
+};
+class derived : public base {
+public:
+void print()
+{
+cout << "print derived class" << endl;
+}
+void show()
+{
+cout << "show derived class" << endl;
+}
+};
+int main()
+{
+base* bptr;
+derived d;
+bptr = &d;
+// virtual functon, binded at runtme
+bptr->print();
+// Non-virtual functon, binded at compile tme
+bptr->show();
+}
+Output:
+print derived class
+show base class
+17); Write a Program to illustrate class templates
+// If two characters are passed to functon template, character with larger ASCII value is displaled.
+#include <iostream>
+using namespace std;
+// template functon
+template <class T>
+T Large(T n1, T n2)
+{
+return (n1 > n2) ? n1 : n2;
+}
+int main()
+{
+int i1, i2;
+foat f1, f2;
+char c1, c2;
+cout << "Enter two integers:\n";
+cin >> i1 >> i2;
+cout << Large(i1, i2) <<" is larger." << endl;
+cout << "\nEnter two foatng-point numbers:\n";
+cin >> f1 >> f2;
+cout << Large(f1, f2) <<" is larger." << endl;
+cout << "\nEnter two characters:\n";
+cin >> c1 >> c2;
+cout << Large(c1, c2) << " has larger ASCII value.";
+return 0;
+}
+Output
+Enter two integers:
+5
+10
+10 is larger.
+Enter two foatng-point numbers:
+12.4
+10.2
+12.4 is larger.
+Enter two characters:
+i
+Z
+i has larger ASCII value.
+18): Write a Program to illustrate functon templates.
+#include<iostream.h>
+#include<conio.h>
+template<class t>
+void swap(t &x, t &l) {
+ t temp = x;
+ x = l;
+ l = temp;
+}
+void fun(int a, int b, foat c, foat d) {
+ cout << "\na and b before swaping :" << a << "\t" << b;
+ swap(a, b);
+ cout << "\na and b afer swaping :" << a << "\t" << b;
+ cout << "\n\nc and d before swaping :" << c << "\t" << d;
+ swap(c, d);
+ cout << "\nc and d afer swaping :" << c << "\t" << d;
+}
+void main() {
+ int a, b;
+ foat c, d;
+ clrscr();
+ cout << "Enter A,B values(integer):";
+ cin >> a>>b;
+ cout << "Enter C,D values(foat):";
+ cin >> c>>d;
+ fun(a, b, c, d);
+ getch();
+}
+Sample Output
+Enter A, B values (integer): 10 20
+Enter C, D values (foat): 2.50 10.80
+A and B before swapping: 10 20
+A and B afer swapping: 20 10
+C and D before swapping: 2.50 10.80
+C and D afer swapping: 10.80 2.50
