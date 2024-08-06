@@ -1,0 +1,36 @@
+        '*&^&^kejwfk2189e23&*8*')
+        '^#^#^^(*&3298dhiuiua6)')
+        ';;54545dgjsjh%^%*:::;;--')
+        '@#gowkns&^($')
+        '&^_)__)(_(__(ejhkhdkwehqk*')
+        '*&^&^wejkhfdi()*&098&&544')
+        '^#^#^^(*&6)')
+'858578')
+        
+        
+    print('encrpted text :',en_txt)
+    decrypt(en_txt)
+def decrypt(text):
+    txt = list(text)
+    dct_txt = []
+    for i in txt:
+        if i == '))*':
+            dct_txt.append('a')
+        elif i == '@#$':
+            dct_txt.append('r')
+        elif i == '&^*':
+            dct_txt.append('m')
+        elif i == '*&^&^':
+            dct_txt.append('d')
+        elif i == '^#^#^^(*&6)':
+            dct_txt.append('e')
+        elif i == ';;:::;;--':
+           dct_txt.append('f')
+        elif i == '858578':
+            dct_txt.append(" ")
+    print("decrypted Text : ","".join(dct_txt))
+
+def send_msg():
+    txt = input('Enter Your text Message: ')
+    encrpt(txt)
+send_msg()
