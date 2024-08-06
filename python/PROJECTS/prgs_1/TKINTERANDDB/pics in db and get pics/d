@@ -1,0 +1,35 @@
+import mysql.connector
+from tkinter import filedialog
+from tkinter import Tk
+
+def insert_image_into_db(file_path):
+    try:
+        connection = mysql.connector.connect(
+            host="your_host",
+            user="your_user",
+            password="your_password",
+            database="your_database"
+        )
+        
+        cursor = connection.cursor()
+        
+        with open(file_path, "rb") as file:
+            image_data = file.read()
+            cursor.execute("INSERT INTO images (image_data) VALUES (%s)", (image_data,))
+        
+        connection.commit()
+        cursor.close()
+        connection.close()
+        
+        print("Image inserted successfully into the database.")
+    except Exception as e:
+        print("Error:", str(e))
+
+def select_image_file():
+    Tk().withdraw()  # Hide the main window
+    file_path = filedialog.askopenfilename()
+    if file_path:
+        insert_image_into_db(file_path)
+
+if __name__ == "__main__":
+    select_image_file()

@@ -1,0 +1,5 @@
+create_db  ---> creates a databse
+table_create    ----> crate table
+student_reg   ----> student will register ---> inserts data
+getdetail  ---> fetches data
+login ---> checks entered data is present and showws login if exists
