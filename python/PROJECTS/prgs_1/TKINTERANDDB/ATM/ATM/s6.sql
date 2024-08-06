@@ -1,0 +1,2 @@
+use switzbank;
+show tables
