@@ -1,0 +1,5 @@
+if we add integer and float the python returns float only
+if we multiply integer and float the python returns float only
+
+
+# variable must be decalred and initialised before its use
