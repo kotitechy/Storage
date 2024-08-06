@@ -1,0 +1,112 @@
+variable : a variable is just like an container that stores the value
+or a variable is an memory location to store value 
+
+# declare variable and initialise value 
+we declare variable and initialse values to when create it
+ex- name = 'PYTHON'
+
+
+#comments 
+comment is line that are written in program when we run program complier ignores
+=>comments types
+1. single line comments declared using #
+ex- #single comment
+2. multiline comments declared in between 
+ex- ''' and ''' 
+ex- """ and """
+
+#indentation
+indentation is used to declare a block of code starting and ending 
+declared using tab spaces
+ex -
+print('Hello World')
+a = 10 #level 0
+if a==10:
+	print("a = 10") #level 1
+	if a<5:
+		print("a is less than 5") #level 2
+	else:
+		print("a is grater than 5")
+else:
+print('a is not 10')
+
+
+#datatypes
+python datatype can store diffrent types values 
+different datatypes:
+1. number --integrs,floating,double,complex numbers
+2. string  -- sequence of characters within '' or ""
+3. boolean  ---True or False
+4. list  -- mutable --change value later
+5. tuple -- im-mutable --no changing value later
+6. set  -- unique values 
+7. dictionary  -- key : value 
+8. none --none
+
+Ex - 
+n = 10 #number
+s = 'shiva' #string
+b = True #True or False Boolean
+ls = [1,2.22,'shiva',True]  #list
+tp = ('shiva',18,False,2.2) #tuple
+dict = {'name' : 'shiva', 'roll' : 18, 'in_class' : False, 'gpa' : 9.23}  #dictionary
+s1 = {1,'shiva',2.2,True} #sets
+
+=> decision making
+making a decision to make the code / statements to be run accordingly
+1. if 
+2. if-else
+3. if-else-if-ladder
+4. nested if
+
+1. if 
+ex- 
+age = 18
+if age == 18:
+	print("You can vote")
+
+2. if-else
+ex- 
+age = 16
+if age == 18:
+	print("You can vote")
+else:
+	print("You can't vote")
+
+3. if-else-if-ladder
+ex- 
+age = 16
+if age < 20:
+	print("Entry")
+elif age > 20:
+	print("No Entry")
+else:
+	print("Invalid Age")
+
+4. nested if -- if statement with in if
+
+ex- 
+age = 16
+name = 'uma'
+if age < 20:
+	print("Entry")
+	if name == 'uma':
+		print("Hello sir")
+	else:
+		print('Hello stranger')
+elif age > 20:
+	print("No Entry")
+else:
+	print("Invalid Age")
+
+
+function:
+. block of code togather to perform a paticular task
+. funtion can be once declared and called n number of times
+. def keyword is used to declare function
+ex -
+def sum(a, b):
+	print("Sum is : ",a+b)
+
+sum(1, 2)
+sum(5, 6)
