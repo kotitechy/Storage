@@ -1,0 +1,36 @@
+18x22 inches
+aurdino mega micro controller
+light weight iron sheets
+17mg 995 servo motors
+5 servo motors for each leg and 3 servo motors for each hand
+1 servo motor for head
+6volt foir servo motors and 12volt for micro controller
+ultrasonic sensor for head
+for bluetooth hc-05 bluetooth module
+
+
+app
+hash blueetooth
+
+
+functions
+hi
+shake hand
+hands up
+hands down
+right bicep
+left bicep
+double biceps
+
+maan karate	
+it moves
+excercise-1
+side-bend
+dab(show hands-left)
+sit down
+stand up
+turn right
+turn left
+move forward
+pushups
+dance
