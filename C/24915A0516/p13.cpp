@@ -22,15 +22,20 @@ int main(){
 	}
 	int n3 = n1 + n2;
 	int a3[n3];
+	printf("\n new array  size: %d",n3);
+	// a3 <- a1
 	for(i=0;i<n1;i++){
 		a3[i] = a1[i];
 	}
-	for(i=0;i<n2;i++){
-		a3[n1] = a2[i];
+	// a3 <- a2
+	j=0;
+	for(i=n1;i<n3;i++){
+		a3[i] = a2[j];
+		j+=1;
 	}
-	printf("Array-3: \n [");
-	for(i=0;i<=n3;i++){
-	printf("%d",a3[i]);
+	printf("\n Array-3: \n [");
+	for(i=0;i<n3;i++){
+	printf("%d,",a3[i]);
 	}
 	printf("]");
 	
