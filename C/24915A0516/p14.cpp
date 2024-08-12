@@ -1,4 +1,4 @@
-// @d Array
+// 2d Array
 #include<stdio.h>
 //#include<conio.h>
 int main(){
