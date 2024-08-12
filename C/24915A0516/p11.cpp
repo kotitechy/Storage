@@ -15,8 +15,8 @@ int main(){
 	scanf("%d",&pos);
 	// Logic
 	for(i=pos;i<n-1;i++){
-		a[i] = a[i+1];
-		n--;
+		a[pos] = a[i+1];
+		n-=1;
 	}
 	
 	printf("\n Array after Deletion");
