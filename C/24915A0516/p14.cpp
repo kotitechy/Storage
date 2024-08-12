@@ -1,4 +1,4 @@
-// Merge two unsorted Arrays
+// @d Array
 #include<stdio.h>
 //#include<conio.h>
 int main(){
