@@ -1,3 +1,8 @@
+// Write a C program to print $
+int main(void) {
+    printf("$");
+
+}
 // Printing Concatenation Challenge
 
 #include <stdio.h>
@@ -22,4 +27,5 @@ int main() {
     printf("This is a backslash: \\");
     return 0;
 }
+
 
