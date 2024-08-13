@@ -3,6 +3,14 @@ int main(void) {
     printf("$");
 
 }
+// Basic Expression Printing Test
+
+#include <stdio.h>
+
+int main() {
+    printf("1 + 2 = %d", 1 + 2);
+    return 0;
+}
 // Printing Concatenation Challenge
 
 #include <stdio.h>
