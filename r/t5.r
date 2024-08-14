@@ -24,6 +24,9 @@ print(a)
 }
 # for loop with vector
 weeks <- list("sunday","monday","tuesday","wednesday","thursday","friday","saturday")
+for(x in weeks){
+print(x)
+}
 # while loop
 i=9
 while(i>0){
