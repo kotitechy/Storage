@@ -75,3 +75,6 @@ class(y)
 min(12,33,28)
 max(12,34,56)
 sqrt(16)
+abs(-90.22) # return +ve
+ceiling(1.4) # round of upward nearest
+floor(1.4) # round of downward nearest
