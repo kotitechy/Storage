@@ -74,3 +74,4 @@ class(y)
 # built in math functions
 min(12,33,28)
 max(12,34,56)
+sqrt(16)
