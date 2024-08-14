@@ -117,3 +117,9 @@ a>=b
 a<=b
 a!=b
 a==b
+
+# assignment
+a<-10
+a
+20->b
+b
