@@ -63,3 +63,14 @@ name
 rollno
 pno
 branch
+
+# type conversion
+a = 10L
+b = 3i
+x = as.numeric(a)
+y = as.integer(b)
+class(x)
+class(y)
+# built in math functions
+min(12,33,28)
+max(12,34,56)
