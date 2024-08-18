@@ -1,0 +1,16 @@
+install nodejs
+# start nodejs>> npm init
+# check version
+> node -v
+> npm -v
+# To install create-react-app globally, run the following command:
+npm -g create-react-app
+# create a new react application
+cd path\to\your\projects\folder
+
+# create a new app 
+npx create-react-app app-1 // just like django apps
+>> cd app-1
+# start develpment server
+npm start  // just like string django server on localhost
+# default port is http://localhost:3000
