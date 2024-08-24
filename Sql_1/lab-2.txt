@@ -1,0 +1,11 @@
+// 4tables
+create database 24915A0516;
+use 24915A0516;
+create table student(roll_no int(10),branch varchar(50),mobile_no int(12),address text);
+show tables;
+create table employee(eid int(12),name varchar(50),dept_name varchar(50),salary int(10),designation varchar(50));
+show tables;
+create table customer(cid int(25),cname varchar(25),phone_no int(12),city varchar(50));
+show tables;
+create table account(aid int(25),name varchar(50),branch varchar(50),balance int(50));
+show tables;
