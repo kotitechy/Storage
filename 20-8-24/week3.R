@@ -1,0 +1,26 @@
+x<-1:5
+x
+n<-6:10
+n
+y<-c(x,n)
+z=append(x,n)
+print(y)
+print(z)
+#--------------------
+#create vector
+x<-1:5
+n<-letters[1:5]
+y<-c(x,n)
+print(y)
+typeof(y)
+print(x)
+typeof(n)
+#------------
+x<-1:5
+x<-append(x,6:10)
+print(x)
+#------------
+v1<-C(1,2,3,4)
+v1[5]<-5
+v1[6]<-6
+v1
