@@ -1,0 +1,23 @@
+CREATE TABLE customer ( cust id INT-primary key,
+cust name VARCHAR
+CREATE TABLE-Item(
+Item id INT primary key,
+Item name VARCHAR,
+price INT
+CREATE TABLE sale(
+bill no INT UNIQUE,
+bill date DATE,
+cust id INT
+FOREIGN KEY (cust id) REFERENCES customer(cust_id),
+item id int,
+FOREIGN KEY (iton_id) REFERENCES item(item_id),
+qty_seld-int
+INSERT into customer VALUES (1, 'John Doe'), (2, 'Jane Smith'), (3, 'Alice Johnson'), (4, 'Bob Brown'), (5, "Charlie Davis');
+INSERT INTO item (item_id, Iten_name, price) VALUES (1, "laptop", 1000), (2, 'Smartphone',800), (3, Tablet',600), (4, 'Headphones", 200), (5, 'Camera',108); INSERT INTO sale (bill_no, bill_date,cust_id,item_id,qty_sold) VALUES (1, '2823-07-01,1,1,1), (2, '2023-07-01',2,2,2), (3, 2023-07-02',3,3,1), (4, 2023-07-831,4,4,3), (5, '2023-07-10,5,5,1);
+SELECT sale.bill no,customer.cust name, item. item id
+INNER join on sale.item id=item.item id
+INNER-join customer on sale.cust id-customer.cust.id
+where bill date 2023-07-01
+SELECT sale.bill_no,sale.bill_date,customer.cust_name,item.item_name,item.price,sale.qty_sold, item.price*sale.qty_sold
+FROM sale, customer, item WHERE customer.cust_id=sale.cust_id and item.item_id=sale.item_id;
+SELECT customer.cust_name FROM customer, item, sale WHERE item.item_id=sale.item_id and customer.cust_id=sale.cust_id and item.price> '200';
