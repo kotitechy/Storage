@@ -11,3 +11,5 @@ select * from customers;
 insert into items(item_id, item_name) values (1100,"cabinet-rgb"),(1101,"rgb-fans"),(1102,"monitors-22inch"),(1103,"keyboard-mouse combo"),(1104,"bluetooth dongle"),(1105,"rasberry pi 5-8gb"),(1106,"wifi dongle"),(1107,"power cables"),(1108,"ssd-512"),(1109,"nvme-1tb");
 
 insert into sales(bill_no,bill_date,cus_id,item_id, q_sold) values (13,20230805,1001,1103,1),(2,20230812,1002,1100,2),(3,20230814,1003,1101,3),(4,20230819,1001,1102,15),(5,20230821,1007,1103,18),(6,20230823,1008,1104,1),(7,20230827,1008,1105,13),(8,20230830,1005,1106,20),(9,20230901,1003,1107,34),(10,20230903,1002,1108,100),(11,20230923,1002,1109,19),(12,20231027,1001,1100,24); 
+ alter table items add price int(20);
+select cus_name,item_name,q_sold from customer,item,sale where customer.cus_id =sale.cus_id;
