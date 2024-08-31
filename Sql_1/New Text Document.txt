@@ -1,9 +1,9 @@
-create database 24915A0517;
-use 24915A0517;
+create database 24915A0516;
+use 24915A0516;
 
-create table customers (cus_id int(255), cus_name varchar (255));  
-create table items (item_id int(255), item_name varchar (255));  
-create table sales (bill_no int(255), bill_date DATETIME,cus_id int(255), item_id int(255), q_sold int(255)); 
+create table customers (cus_id int(255) primary key, cus_name varchar (255));  
+create table items (item_id int(255) primary key, item_name varchar (255),price int(20));  
+create table sales (bill_no int(255), bill_date DATETIME,cus_id int(255), item_id int(255), q_sold int(255),foriegn key (cus_id) references customers(cus_id),foreign key (item_id) references items(item_id)); 
 
 insert into customers(cus_id, cus_name) values (1001,"vamshi"),(1002,"ramesh"),(1003,"karthik"),(1004,"jetendra"),(1005,"sai"),(1006,"shiva"),(1007,"raj"),(1008,"pranay"),(1009,"karan"),(1010,"uma");
 select * from customers;
