@@ -1,5 +1,5 @@
 create database 24915A0517;
-use 24915A0516;
+use 24915A0517;
 
 create table customers (cus_id int(255), cus_name varchar (255));  
 create table items (item_id int(255), item_name varchar (255));  
