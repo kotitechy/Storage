@@ -1,4 +1,4 @@
-create database 24915A0516;
+create database 24915A0517;
 use 24915A0516;
 
 create table customers (cus_id int(255), cus_name varchar (255));  
