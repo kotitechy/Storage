@@ -1,0 +1,5 @@
+li=list("red", "green", c(21,32,11), TRUE,51, 23, 119.1)
+print(li)
+l2=list(c("Jan","Feb","Mar"), matrix(c(3,9,5,1,-2,8), nrow=2),list("hai",12.3))
+print(l2)
+v=c("months","matrix","Inner List")
