@@ -1,0 +1,9 @@
+import pymysql as sq
+try:
+	con=sq.connect(host="database-mysql.c9iwyuqw83oz.eu-	north-1.rds.amazonaws.com",user="admin",passwd="11971197",database="shiva")
+	print("success")
+except Exception as e:
+	print(e)
+
+finally:
+	con.close()
