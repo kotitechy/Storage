@@ -7,6 +7,8 @@ url="https://www.bikewale.com/royalenfield-bikes/"
 page=requests.get(url)
 
 soup=BeautifulSoup(page.content,'html.parser')
+# prettify
+print(soup.prettify())
 # print(soup.text) # text
 
 # image=soup.findAll('h2')
@@ -36,7 +38,48 @@ links=soup.find_all('a')
 
 ls=set()
 # get class list
-# for i in soup.find_all(class_=True):
-#     ls.update(i['class'])
+for i in soup.find_all(class_=True):
+    ls.update(i['class'])
 # for i in ls:
 #     print(i)
+
+# specific div with specific class 
+
+ls=list(ls)
+d=[]
+print(ls[8])
+for i in ls:
+    data=soup.find('div',class_=i)
+    d.append(data)
+data=[]
+
+# with open('output.txt','w',encoding='utf-8') as f:
+#     for i in d:
+#         if i:
+#             # print(i.text)
+#             f.write(f"{i.text},\n")
+#             # data.append(i.text)
+# print(data)
+# with open('output.txt','w') as f:
+#     for i in data:
+#         f.write(i+"\n")
+
+# get image links
+# img_l=[] 
+# imgs=soup.find_all('img')
+# # print(img)
+# for i in imgs:
+#     j=i['src']
+#     img_l.append(j)
+#     # print(j)
+# print(img_l[10])
+
+# get links
+# l=[]
+# links=soup.find_all('a')
+# for i in links:
+    # print(links)
+    # l.append(i['href'])
+    # print(i.text)  # get text of links
+
+# print(f"https://www.bikewale.com{l[9]}")
