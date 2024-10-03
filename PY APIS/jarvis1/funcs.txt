@@ -1,0 +1,19 @@
+1. speak
+-
+
+
+
+
+
+
+
+
+
+
+
+
+--> modules
+1. pyttsx3
+2. sapi5-api
+3. datetime
+4. speech recognition
