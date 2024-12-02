@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+
+# Sample data: Fruit production in Telangana and Andhra Pradesh (in tons)
+# This data is just an example, modify with real statistics if needed
+fruits_telangana = {'Mango': 3500, 'Banana': 2500, 'Guava': 800, 'Papaya': 600, 'Orange': 400}
+fruits_andhra = {'Mango': 3000, 'Banana': 2200, 'Guava': 900, 'Pineapple': 500, 'Apple': 600}
+
+# Create data for pie chart
+labels_telangana = list(fruits_telangana.keys())
+sizes_telangana = list(fruits_telangana.values())
+labels_andhra = list(fruits_andhra.keys())
+sizes_andhra = list(fruits_andhra.values())
+
+# Create pie chart for Telangana
+plt.figure(figsize=(12, 6))
+
+# Subplot 1 - Telangana
+plt.subplot(1, 2, 1)  # (rows, columns, position)
+plt.pie(sizes_telangana, labels=labels_telangana, autopct='%1.1f%%', startangle=140, colors=['#ff9999','#66b3ff','#99ff99','#ffcc99','#c2c2f0'])
+plt.title('Fruit Production in Telangana')
+
+# Subplot 2 - Andhra Pradesh
+plt.subplot(1, 2, 2)  # (rows, columns, position)
+plt.pie(sizes_andhra, labels=labels_andhra, autopct='%1.1f%%', startangle=140, colors=['#ff9999','#66b3ff','#99ff99','#ffcc99','#c2c2f0'])
+plt.title('Fruit Production in Andhra Pradesh')
+
+# Display the pie charts
+plt.tight_layout()
+plt.show()
