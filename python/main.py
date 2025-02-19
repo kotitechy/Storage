@@ -1,37 +1,49 @@
-import pymysql as sq
-import os
-
-try:
-    con = sq.connect(
-        host="database-mysql.c9iwyuqw83oz.eu-north-1.rds.amazonaws.com",
-        user="admin",
-        passwd="11971197",  # Corrected this line
-        database="shiva"
-    )
-    print("Connection successful!")
-
-    with con.cursor() as cur:
-        cur.execute("CREATE TABLE IF NOT EXISTS u2 (sno INT PRIMARY KEY, name VARCHAR(255))")
-        print("Table created")
-        
-        cur.execute("INSERT INTO u2 VALUES (1, 'Shivan')")
-        print("Data inserted")
-        
-        cur.execute("UPDATE u2 SET name = 'Karthik' WHERE sno = 1")
-        print("Data updated")
-        
-        cur.execute("SELECT * FROM u2")
-        r = cur.fetchall()
-        print("Data:", r)
-        
-    con.commit()  # Commit changes
-
-except sq.MySQLError as e:
-    print("MySQL Error:", e)
-except Exception as e:
-    print("Error:", e)
-
-finally:
-    if 'con' in locals() and con.open:  # Check if con was successfully created before closing
-        con.close()
-        print("Connection closed.")
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+    def insert(self,root,data):
+        if(root==None):
+            temp = Node(data)
+            return temp
+        elif(data<= root.data):
+            root.left=self.insert(root.left,data)
+        elif(data> root.data):
+            root.right=self.insert(root.right,data)
+        return root
+    def pretravesal(self,n1):
+        if n1 is  None:
+            return
+        print(n1.data,end=",")
+        self.pretravesal(n1.left)
+        self.pretravesal(n1.right)
+    def posttravesal(self,n1):
+        if n1 is  None:
+            return
+        self.posttravesal(n1.left)
+        self.posttravesal(n1.right)
+        print(n1.data,end=",")
+    def intravesal(self,n1):
+        if n1 is  None:
+            return
+        self.intravesal(n1.left)
+        print(n1.data,end=",")
+        self.intravesal(n1.right)
+n1=Node(10)
+while(1):
+    n=int(input("1. Insert 2, Display"))
+    if(n==1):
+        data=int(input("Data To insert"))
+        n1.insert(n1,data   )
+        print(data,"Inserted to Tree")
+    if(n==2):
+        print("Post-Order",end=" ")
+        n1.posttravesal(n1)
+        print()
+        print("Pre-order",end=" ")
+        n1.pretravesal(n1)
+        print()
+        print("In-Order",end=" ")
+        n1.posttravesal(n1)
+        print()
