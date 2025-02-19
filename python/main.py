@@ -30,6 +30,15 @@ class Node:
         self.intravesal(n1.left)
         print(n1.data,end=",")
         self.intravesal(n1.right)
+    def search(self,root,data):
+        if(root is None):
+            return False
+        if(root.data==data):
+            return True
+        elif(root.data<=data):
+            return self.search(root.left,data)
+        elif(root.data>data):
+            return self.search(root.right,data)
 n1=Node(10)
 while(1):
     n=int(input("1. Insert 2, Display"))
@@ -47,3 +56,10 @@ while(1):
         print("In-Order",end=" ")
         n1.posttravesal(n1)
         print()
+    if(n==3):
+        t = int(input("Enter Search Element: "))
+        s=n1.search(n1,t)
+        if(s):
+            print("Element Found")
+        else:
+            print("Element Not Found")
