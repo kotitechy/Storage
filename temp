@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            input{
+                width:100%;
+                padding:12px;
+                border:1px solid #ccc;
+                border-radius:4px;
+                box-sizing:border-box;
+                margin-top:6px;
+                margin-bottom:16px;
+            }/*style submit button*/
+            input[type=submit]{
+                background-color:#04AA6D;
+                color:white;
+            }
+            /* container inputs*/
+            .container{
+                background-color:#f1f1f1;
+                padding:20px;
+            }
+            /* message onclick password*/
+            .message{
+                display:none;
+                background:#f1f1f1;
+                color:#000;
+                position:relative;
+                padding:20px;
+                margin-top:10px;
+            }
+            #message p{
+                padding:10px 35px;
+                font-size:18px;
+            }
+            /*green text add and check req */
+            .valid{
+                color:green;
+
+            }
+            .valid:before{
+                position:relative;
+                left:-35px;
+                content:"✔";
+            }
+            /* red color*/
+            .invlaid{
+                color:red;
+            }
+            .invalid:before{
+                position:relative;
+                left:-35;
+                content:"X";
+
+            }
+        </style>
+            
+        
+    </head>
+    <body>
+        <h3>Password validation</h3>
+        <p> try to submit the form</p>
+        <div class ="container">
+            <form action="/action_page.php">
+                <label for ="username">usernmae</label>
+                <input type="text" id="username" name="username" required.
+                <label for="new">password</label>
+                <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.[A-Z]).{8,}"
+                title="must contain atleast one number and one uppercase and lowercase,and at least 8 or more characters"required>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        <div id="message">
+            <h3>Password must contain the following</h3>
+            <p id="letter" class="invlaid">A<b>lower case</b>letter</p>
+            <p id="captial" class="invalid">A<b>capital(uppercase)</b>letter</p>
+            <p id="number" class="invalid">A<b>number </p>
+            <p id="length class="invalid>minimum<b> 8 characters</b></p>
+        </div>
+        <script>
+            /*user clicks on password show message box*/
+            myinput.onfocus=function(){
+                document.getElementbyId("Message").style.display="block";
+                var myinput=document.getElementbyId("psw");
+                var letter=document.getElementbyId("letter");
+                var capital=document.getElementbyId("capital");
+                var number=document.getElementbyId("number");
+                var lenght=document.getElementbyId("length");
+            }
+
+
+
+
+        
+    </body>
+</html>
