@@ -27,7 +27,7 @@ Welcome to my GitHub! I'm a passionate developer currently exploring the realms 
 `MongoDB` `MySQL` `SQLite` `Firebase` `PyMySQL`
 
 **DevOps & Tools:**  
-`Docker` `JWT` `Postman` `Apache` `Nginx` `Ngrok` `Zabbix` `Splunk` `AWS`
+`Docker` `JWT` `Postman` `Apache` `Nginx` `Ngrok`  `AWS`
 
 **AI / ML / Data Tools:**  
 `Pandas` `NumPy` `Matplotlib` `scikit-learn` `Google Generative AI` `Gemini` `Perplexity AI` `LangChain` `FAISS`
@@ -105,7 +105,7 @@ Welcome to my GitHub! I'm a passionate developer currently exploring the realms 
 ## 🌐 Connect with Me
 
 - 🔗 GitHub: [@shivacharanonline](https://github.kotitechy.com)
-- 📨 Email: your_email@example.com *(Replace with your email)*
+- 📨 Email: ksc11197@gmail.com *(Replace with your email)*
 - 📷 Portfolio: [Coming Soon]
 
 ---
